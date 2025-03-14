@@ -2,26 +2,22 @@ import React from 'react';
 import {ImageBackground, Text, View, StyleSheet, Image, Button, TouchableOpacity} from 'react-native';
 
 import { SCREENS } from '../utils/constants';
+import CustomSpesBtn from '../components/CustomSpesBtn.tsx';
 
 const StartScreen = ({ navigation }) => {
   return (
-      <ImageBackground
-        source={{ uri: '' }}
-        style={styles.backgroundImage}
+      <View
+        style={{backgroundColor: '#000', flex: 1, justifyContent: 'space-around'}}
       >
-          <TouchableOpacity onPress={() => navigation.navigate(SCREENS.BottomRouter)}>
-            <Text>go</Text>
-          </TouchableOpacity>
-      </ImageBackground>
+          <Text style={{color: '#fff', alignSelf: 'center', fontSize: 30, fontWeight: 'bold',}}>
+            Rama Yoga Legends
+          </Text>
+
+        <Image source={require('../assets/img/arrow.png')} style={{ width: '40%', height: '25%', alignSelf: 'center'}} />
+        <CustomSpesBtn title='Start' onPress={() => navigation.navigate(SCREENS.BottomRouter)} />
+      </View>
   );
 };
 
-const styles = StyleSheet.create({
-  backgroundImage: {
-    flex: 1,
-    resizeMode: 'cover',
-    justifyContent: 'center',
-  },
-});
 
 export default StartScreen;

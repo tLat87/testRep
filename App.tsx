@@ -1,7 +1,8 @@
 import {Provider} from 'react-redux';
 import Router from './src/navigation/stack';
-import {persistor, store} from './src/utils/redux/store';
 import {PersistGate} from 'redux-persist/integration/react';
+import {persistor, store} from './src/redux/store';
+
 
 const App = () => {
   return (

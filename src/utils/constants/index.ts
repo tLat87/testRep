@@ -1,5 +1,6 @@
 import {Dimensions} from 'react-native';
 import AllTrainingsScreen from '../../screens/AllTrainingsScreen.tsx';
+import UWinScreen from '../../screens/UWinScreen.tsx';
 
 export enum SCREENS {
   BottomRouter = 'BottomRouter',
@@ -11,7 +12,14 @@ export enum SCREENS {
   ZFOURTH_T = 'Settings',
   AllTrainingsScreen='AllTrainingsScreen',
   CreateTrainingScreen='CreateTrainingScreen',
-  TrainingDetainlAddScreen='TrainingDetainlAddScreen'
+  TrainingDetainlAddScreen='TrainingDetainlAddScreen',
+  StoryScreen1='StoryScreen1',
+  StoryScreen3='StoryScreen3',
+  StoryScreen2='StoryScreen2',
+  GameScreen='GameScreen',
+  TrainingAddedSCreen="TrainingAddedSCreen",
+  UWinScreen="UWinScreen",
+  TimeEndScreen="TimeEndScreen"
 }
 export const {width:SCREEN_WIDTH, height:SCREEN_HEIGHT} = Dimensions.get('screen');
 

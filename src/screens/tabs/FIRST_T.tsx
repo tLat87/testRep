@@ -1,43 +1,46 @@
 import React from "react";
 import {View, StyleSheet, ScrollView, Text, ImageBackground, TouchableOpacity} from 'react-native';
 import {SCREENS} from '../../utils/constants';
+import StoryScreen2 from '../StoryScreen2.tsx';
 
 const FIRST_T_SCREEN = ({ navigation }) => {
   return (
     <ScrollView style={styles.container}>
 
-      <TouchableOpacity onPress={()=>{navigation.navigate(SCREENS.AllTrainingsScreen, {type: 'Asanas'})}}>
+      <TouchableOpacity onPress={()=>{navigation.navigate(SCREENS.StoryScreen1, {type: 'Asanas'})}}>
         <ImageBackground
-          source={{ uri: "https://s3-alpha-sig.figma.com/img/e668/1615/ce30d7326dc17a041916adf54a940d13?Expires=1742774400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ZuK1~0V129Qi1m4-3GnVwObG23yeab1K27mylypFU4B~nMCY1wkq1ZLXfYnq9vX4ddrw7V~sbS1OI0f4VqJVrVRgld7hujkDq38LYry0MT0hOfpcD6RHWkZDeR5DzvbFR5qTEi~xJf5F5AcWFdGCLjMq925bWZRPgnVdz~8470Y~zV4Vbr8a7Tl7oZq7tReNSjY6oTrHdAM~2CxMzMLn7f3q9n0yQP6FEyZ12VDggxYIEzFw3Qts6iYl-c2s9A-i3lM0zuUa2PDNANuO9ytj7a3Bc~ZMUot4cIoWLWkP-IVu9RZWmEoU2dew680maiR9E5aKCv5M32qUq1D18O4EPg__" }} // Тут можешь вставить свою картинку
+          source={{ uri: "https://s3-alpha-sig.figma.com/img/e3ac/a12f/dc494af4d0ab3ff95847962a9c931e28?Expires=1742774400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=BsrNz3eGkIxmeAq4juQU46tHmUyLW~Z8j-WJOG3pGs04~XKgBv2H1baQbMWgf~OUlEyMXcueti5cIOnU5sJ8fGUktxRutEt4cTNBVEFpcgRYZCDUXr-WqxX7vm5rOO3cCInlm-DRlBJmuXIa7QXbFY0Q5yFs31pWH5KLjDPUL1U4DmgB5sbdNf50HnnKsXD6W9Gajo~VS~BsUBt~YQ-C9qf-g0TfGvW9sbHF0YlRIK-XibiEUipYyeCbZijHlKGy7HHq2jKw2cfZedY1T7u4df8DomX3C4GbdUVUcyA~dZop5~JQUBaHrAj3e-uaqL1ZlzG06lYtIJkpCnbmQKTxjw__" }} // Тут можешь вставить свою картинку
           style={styles.imageBackground}
           imageStyle={{ borderRadius: 24 }}
         >
           <View style={styles.overlay} />
-          <Text style={styles.text}>Asanas</Text>
+          <Text style={styles.text}>Main Episodes</Text>
         </ImageBackground>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={()=>{navigation.navigate(SCREENS.AllTrainingsScreen, {type: 'Pranayamas'})}}>
-        <ImageBackground
-          source={{ uri: "https://s3-alpha-sig.figma.com/img/fc47/9a0c/dbd03552a4821867d70cb955280bf7d4?Expires=1742774400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YdIJVk7b011enuPXnWbm6ydEkGf0he6O2Fl~M5Mc1SzzEKx2pH1IMPva1AjtZ0UpV81Hc68nujJ3vTkgYh1JwYX5s0uIk~PeUdx731YqIP0GmzeOgdhlCd2yuVLmE2mKcwDu6Cdf~g4WbybLi7LQDrBT7o5Aasnb9cIJuIJXqI2SZkhWlLsaX~TxcuuRp3p4gML92kjQJ8U-~Bez-Ci7JuDUNBHAb3C9eDuLCm2c70SAWZLQObbmvvYTDHQEHUiBytQt6SFx6alVTs2JkmFeDw7bKJgBeG8mSrvOKFfprRfBNZ3UyBPRfuzsDx~K3ZslsBbJ70gAIeVr7tIGw4tXnA__" }} // Тут можешь вставить свою картинку
-          style={styles.imageBackground}
-          imageStyle={{ borderRadius: 24 }}
-        >
-          <View style={styles.overlay} />
-          <Text style={styles.text}>Pranayamas</Text>
-        </ImageBackground>
-      </TouchableOpacity>
-
-      <TouchableOpacity onPress={()=>{navigation.navigate(SCREENS.AllTrainingsScreen, {type: 'Meditation'} )}}>
+      <TouchableOpacity onPress={()=>{navigation.navigate(SCREENS.StoryScreen2, {type: 'Pranayamas'})}}>
         <ImageBackground
           source={{ uri:
-            "https://s3-alpha-sig.figma.com/img/5d3d/5e96/a3d33b28d0e9cba5379ac7a40f867b51?Expires=1742774400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=cvOSHnmwkFGA9iLOEyoHCeanEXXWbqnx~nOo7JMA8j9Zgpe1jfrjDLawcRziILzZXZPqvOpGjrdec4vWeZNtCEnaetCk0Ki5~em3jgifEWW9y6f3UiSAN0Tg7izaHnFHITt0k~bMhJ0DqnyN-59Gk2R2AWWwFVeErPak26D9hX5Quw-pzMdUGAOGfdWLWfMisFGtGeHZflbhQk7OHT1b1FA~cgUygxzY8O2J5NHcRK~CjbkPe95AOmEh1YctSgx9sKgu6D7PfuRI3Z7ll54U1mdd9lIFdGpMNJ4bctZFPjGr8E~I~xAt665YIxiijeBgfkLMLlAeNwDEoGZQEYvqAw__"
+            "https://s3-alpha-sig.figma.com/img/b2bc/f36f/2d377f3f490522cecf110776c61c2de1?Expires=1742774400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=B4uF3m85I8dfh~c7~MWbmyKLq~H~EMdMYkFcXKlDwz9aphhyv35umKWCy6wxF5Ky10lCF20JBUqtg7v27ippfn5bGilLMwVhAgv-J93Y6qK4Q1qbUEi01ERR7ZyTH-ldvny8o6V1nuAn9fgkT~fdj7T58BpEaSeQtfSfbIrLi1FMvVqjvfEPnOVdU8Ik-3hf6PLJFN2YHu5AMccriJmdm9emj3g68ItwVp2dQohSjtsLwmA9BeTfD4GLF7LBBAPA1RGq2BuEAW8hnVUMnAieioAIrmTSzjVZA07smVYO0lZlxTGm8Db1vr0-tMGoLF6XOy7AdX8yhbHJSgeMkQKfAg__"
         }} // Тут можешь вставить свою картинку
           style={styles.imageBackground}
           imageStyle={{ borderRadius: 24 }}
         >
           <View style={styles.overlay} />
-          <Text style={styles.text}>Meditation</Text>
+          <Text style={styles.text}>Biographies of Main Characters</Text>
+        </ImageBackground>
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={()=>{navigation.navigate(SCREENS.StoryScreen3, {type: 'Meditation'} )}}>
+        <ImageBackground
+          source={{ uri:
+            "https://s3-alpha-sig.figma.com/img/cc08/2724/070dc29ca75dba6f85095ed71bd5146a?Expires=1742774400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Qs3B9bUHCGc51hkIe19aJbRnrknoEzVRjk31xeDXgALjLAvtr9aIV3Ec1O7Q-howUNsLZQ5P3qSy-l6wi11emkuEfgI85oHrrku15gMOcm3iLXBFGlo9VzzH5Aesq7jwdwAl~Rt48KCdzcFx2veapvXhpLbxUNiVGSYt1q8y~viRWBVj2a4BLvpK6BoCiQAe~fw1v0Okc1XZ99769YI1N29CYrfuQbbPNfi0RjHa~Ve0p5H1HCUYEYUP7S946mRJdP8Vuz255kEy0xaiGgjk3maWd~Pj43MaoDH0OsL4BmsIMIKjQD8gFPCcI0nY-f-3nbxArYn8gT~yFljMI08RgA__"
+        }} // Тут можешь вставить свою картинку
+          style={styles.imageBackground}
+          imageStyle={{ borderRadius: 24 }}
+        >
+          <View style={styles.overlay} />
+          <Text style={styles.text}>Analysis of Philosophical and Spiritual Aspects</Text>
         </ImageBackground>
       </TouchableOpacity>
 
